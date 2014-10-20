@@ -9,7 +9,15 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :courses
 
+  before_save :ensure_role_is_set
+
+  def ensure_role_is_set
+    self.role = if self.role.nil?
+    end
+
   def role?(role_to_compare)
     self.role.to_s == role_to_compare.to_s
   end
 end
+end
+

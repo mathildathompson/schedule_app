@@ -13,6 +13,10 @@ ScheduleApp::Application.routes.draw do
 
   resources :locations
 
+  resources :sessions
+
+  get "/logout", to: "sessions#destroy"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
