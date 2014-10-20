@@ -12,7 +12,21 @@
       </ul>
     </div>
   <% end %>
+  
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
 
+  <p>
+    <%= f.label :start_date%><br />
+    <%= f.text_field :start_date%>
+  </p>
+  <p>
+    <%= f.label :end_date %><br />
+    <%= f.text_field :end_date %>
+  </p>
+  
   <p>
     <%= f.label :programme_id %><br />
     <%= f.collection_select :programme_id, Programme.all, :id, :name %>
@@ -24,8 +38,8 @@
   </p>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
   </div>
   <div class="actions">
     <%= f.submit %>

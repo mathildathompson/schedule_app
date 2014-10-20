@@ -20,6 +20,30 @@
     <%= link_to "Login", new_session_path %> or <%= link_to "Signup", new_user_path %>
   <% end %>
 
+   <nav>
+        <ul>
+          <li>
+            <%=link_to 'locations', locations_path %>
+          </li>
+          <li>
+            <%=link_to 'classrooms', classrooms_path %>
+          </li>
+          <li>
+            <%=link_to 'programmes', programmes_path %>
+          </li>
+          <li>
+            <%=link_to 'courses', courses_path %>
+          </li>
+          <li>
+            <%=link_to 'users', users_path %>
+          </li>
+        </ul>
+
+      </nav>
+
+      
+
+
 
 <%= yield %>
 
