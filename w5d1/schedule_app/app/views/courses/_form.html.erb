@@ -39,12 +39,19 @@
 
   <p>
 
-    <% User.where(role: "Student").each do |student| %>
+    <% User.where(role: "student").each do |student| %>
        <%= check_box_tag "course[student_ids][]", student.id, @course.students.include?(student), id: "course_student_ids_#{student.id}" %>
        <%= f.label :student_ids, student.name, for: "course_student_ids_#{student.id}" %>
         <br>
        <% end %>
        <br>
+    </p>
+
+    <% User.where(role: "instructor").each do |instructor| %>
+      <%= check_box_tag "course[instructor_ids][]", instructor.id, @course.instructors.include?(instructor), id: "course_instructor_ids#{instructor.id}" %> <%= f.label :instructor_ids, instructor.name, for: "course_instructor_ids_#{instructor.id}" %>
+      <br>
+      <% end %>
+      <br>
     </p>
 
   <div class="field">

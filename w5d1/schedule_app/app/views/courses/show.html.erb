@@ -34,6 +34,13 @@
         <% end %>
       </p>
 
+      <p>
+  <strong>User:</strong><br>
+  <% @course.instructors.each do |instructor| %>
+    <%= instructor.name %><br>
+  <% end %>
+</p>
+
 
 
 
