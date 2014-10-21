@@ -1,4 +1,6 @@
 ScheduleApp::Application.routes.draw do
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
   resources :courses
 
 
@@ -14,6 +16,9 @@ ScheduleApp::Application.routes.draw do
   resources :locations
 
   resources :sessions
+
+  resources :calendar
+  
 
   get "/logout", to: "sessions#destroy"
 

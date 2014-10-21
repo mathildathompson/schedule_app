@@ -37,6 +37,16 @@
     <%= f.collection_select :classroom_id, Classroom.all, :id, :name %>
   </p>
 
+  <p>
+
+    <% User.where(role: "Student").each do |student| %>
+       <%= check_box_tag "course[student_ids][]", student.id, @course.students.include?(student), id: "course_student_ids_#{student.id}" %>
+       <%= f.label :student_ids, student.name, for: "course_student_ids_#{student.id}" %>
+        <br>
+       <% end %>
+       <br>
+    </p>
+
   <div class="field">
     <%= f.label :price %><br />
     <%= f.text_field :price %>
