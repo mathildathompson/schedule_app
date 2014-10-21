@@ -1,4 +1,5 @@
 class ClassroomsController < ApplicationController
+  authorize_resource
   # GET /classrooms
   # GET /classrooms.json
   def index

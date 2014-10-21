@@ -11,13 +11,13 @@ class User < ActiveRecord::Base
 
   # before_save :ensure_role_is_set
 
+  def role?(role_to_compare)
+    self.role.to_s == role_to_compare.to_s
+  end
+
   private
   def default_role
     self.role = 'student'
-    end
-
-  def role?(role_to_compare)
-    self.role.to_s == role_to_compare.to_s
   end
 end
 

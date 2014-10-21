@@ -17,8 +17,7 @@ ScheduleApp::Application.routes.draw do
 
   resources :sessions
 
-  resources :calendar
-  
+  get "/events/:id", to: "courses#show"  
 
   get "/logout", to: "sessions#destroy"
 

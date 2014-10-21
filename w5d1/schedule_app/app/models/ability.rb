@@ -3,18 +3,15 @@ class Ability
 
   def initialize(user)
     user ||= User.new
-    if user.role? :admin
+    if user.role? :instructor
         can :manage, :all
 #means a non-logged user or a user without a role
-    elsif user.role? :writer
-      can :create, Post
-      can :update, Post do |post|
-        post.user_id == user.id
-      end
-    elsif user.role? :moderator
-      can :destroy, Comment
-    else
-        can :read, Post
+    elsif user.role? :student
+      can :read, :User
+      can :read, :location
+      can :update, :User
+      else 
+        can :read, :all
     end
 
     # cancan aliases
