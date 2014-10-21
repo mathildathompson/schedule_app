@@ -35,7 +35,13 @@
     <%= f.label :password %><br />
     <%= f.text_field :password %>
   </p>
-
+  <p>
+     <% User.all.each do |user| %>
+       <%= check_box_tag "course[user_ids][]", user.id, @course.users.include?(user), id: "_user_ids_#{user.id}" %>
+       <%= f.label :user_ids, user.name, for: "course_user_ids_#{user.id}" %>
+       <br>
+     <% end %>
+  </p>
 
   <div class="field">
     <%= f.label :name %><br />
