@@ -9,6 +9,8 @@ gem 'pg'
 gem 'cancancan', '~> 1.9'
 gem "bcrypt-ruby", "~> 3.0.0"
 gem 'event-calendar', :require => 'event_calendar'
+gem 'carrierwave', '0.9.0'
+gem 'rmagick', :require => 'RMagick'
 
 group :development, :test do
   gem 'pry-rails'

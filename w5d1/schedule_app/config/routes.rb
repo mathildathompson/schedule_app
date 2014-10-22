@@ -1,4 +1,7 @@
 ScheduleApp::Application.routes.draw do
+  resources :paintings
+
+
   match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   resources :courses

@@ -12,6 +12,7 @@ class Ability
       can :update, :User
       else 
         can :read, :all
+        can :create, User
     end
 
     # cancan aliases
