@@ -21,11 +21,11 @@ pre {
 a {
   color: white;
   &:visited {
-    color: blue;
+    color: grey;
   }
   &:hover {
-    color: green;
-    background-color: #000;
+    color: red;
+    background-color: transparent;
   }
 }
 

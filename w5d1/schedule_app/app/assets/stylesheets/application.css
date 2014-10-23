@@ -25,7 +25,7 @@ margin-top: -5%;
 
 .logo {
   height: 80%;
-  background-image: url("/assets/ga.png");
+  background-image: url("ga.png");
   background-repeat: no-repeat;
   width: 40%;
   background-size: 100% 100%;
