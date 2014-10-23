@@ -7,18 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
   <% flash.each do |name, msg| %>
     <div class="flash-message flash-message-<%= name %>">
       <%= msg %>
     </div>
   <% end %>
-
-  <% if current_user %>
-    Hello <%= current_user.email %>
-    <%= link_to "Logout", logout_path %>
-  <% else %>
-    <%= link_to "Login", new_session_path %> or <%= link_to "Signup", new_user_path %>
-  <% end %>
+  <div class='logo'>
+  </div>
+  
 
    <nav>
         <ul>
@@ -43,12 +40,27 @@
         </ul>
 
       </nav>
+    </header>
 
+<div class='login'>
+  <% if current_user %>
+    Hello <%= current_user.email %>
+    <%= link_to "Logout", logout_path %>
+  <% else %>
+    <%= link_to "Login", new_session_path %> or <%= link_to "Signup", new_user_path %>
+  <% end %>
+</div>
       
 
 
 
 <%= yield %>
+
+
+
+<footer>
+
+</footer>
 
 </body>
 </html>

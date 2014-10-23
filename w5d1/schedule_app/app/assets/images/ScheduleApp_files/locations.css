@@ -1,0 +1,27 @@
+/* line 5, ../../app/assets/stylesheets/locations.css.scss */
+a {
+  color: red;
+  display: inline;
+}
+
+/* line 11, ../../app/assets/stylesheets/locations.css.scss */
+h1 {
+  color: red;
+  text-align: center;
+}
+
+/* line 16, ../../app/assets/stylesheets/locations.css.scss */
+li {
+  width: 100px;
+  display: inline;
+}
+
+/* line 21, ../../app/assets/stylesheets/locations.css.scss */
+ul {
+  display: inline-block;
+}
+
+/* line 24, ../../app/assets/stylesheets/locations.css.scss */
+td {
+  color: red;
+}
