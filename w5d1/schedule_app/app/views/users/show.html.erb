@@ -6,9 +6,23 @@
 </p>
 
 <p>
+<b>File:</b>
+<%= image_tag @user.user_image.thumb.url %>
+</p>
+
+<p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
+
+<p>
+  <b>Course:</b>
+    <% @user.courses.each do |course| %>
+    <%= course.name %>
+  <% end %>
+</p>
+
+
 
 <!-- <p>
   <b>Password digest:</b>

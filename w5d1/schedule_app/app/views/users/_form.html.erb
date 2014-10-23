@@ -19,6 +19,15 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </p>
+
+  <p>
+    <%= f.label :user_image %><br />
+    <%= f.file_field :user_image %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
   <p>
     <%= f.label :password_confirmation %><br />
     <%= f.text_field :password_confirmation %>
@@ -31,31 +40,7 @@
     <%= f.label :phone_number %><br />
     <%= f.text_field :phone_number %>
   </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </p>
-  <p>
-     <% User.all.each do |user| %>
-       <%= check_box_tag "course[user_ids][]", user.id, @course.user.include?(user), id: "user_ids_#{user.id}" %>
-       <%= f.label :user_ids, user.name, for: "course_user_ids_#{user.id}" %>
-       <br>
-     <% end %>
-  </p>
-  <p>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password_digest %><br />
-    <%= f.text_field :password_digest %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

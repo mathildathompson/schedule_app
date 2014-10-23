@@ -6,9 +6,15 @@
 </p>
 
 <p>
+<b>File:</b>
+<%= image_tag @classroom.classroom_image.thumb.url %>
+</p>
+
+<p>
   <b>Location:</b>
   <%= @classroom_location %>
 </p>
+
 
 
 <%= link_to 'Edit', edit_classroom_path(@classroom) %> |

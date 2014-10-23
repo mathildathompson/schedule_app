@@ -18,9 +18,9 @@ classroom1 = Classroom.create!( name: 'Room 1', location_id: l1.id)
 classroom2 = Classroom.create!( name: 'Room 2', location_id: l1.id)
 
 p1 = Programme.create!( name: 'wdi', description: "Build a work-ready skill set and fluency in full stack web development. Develop a portfolio of projects individually and in small teams that are ready to present to employers. Prepare for an internship or entry-level job as a jr. web developer.")
-p2 = Programme.create!( name: 'ux', description: "Build a work-ready skill set and fluency in full stack web development. Develop a portfolio of projects individually and in small teams that are ready to present to employers. Prepare for an internship or entry-level job as a jr. web developer.")
-p3 = Programme.create!( name: 'fewd', description: "Build a work-ready skill set and fluency in full stack web development. Develop a portfolio of projects individually and in small teams that are ready to present to employers. Prepare for an internship or entry-level job as a jr. web developer.")
-p4 = Programme.create!( name: 'bewd', description: "Build a work-ready skill set and fluency in full stack web development. Develop a portfolio of projects individually and in small teams that are ready to present to employers. Prepare for an internship or entry-level job as a jr. web developer.")
+p2 = Programme.create!( name: 'ux', description: "Ten weeks. All day. Monday through Friday. Learn the skills of a UX designer and put them to work while building a comprehensive portfolio.")
+p3 = Programme.create!( name: 'fewd', description: "In this 10-week course, students learn to code, speak the language and implement their own designs by learning HTML, CSS, and JavaScript.")
+p4 = Programme.create!( name: 'bewd', description: "In this 11-week course, students learn to build robust predictive models, test their validity, and clearly communicate resulting insights.")
 
 wdi1 = Course.create!( name:'wdi1', price: 8000, start_date: 20140901, end_date: 20141201)
 wdi2 = Course.create!( name: 'wdi2', price: 8000, start_date: 20140914, end_date: 20141201)

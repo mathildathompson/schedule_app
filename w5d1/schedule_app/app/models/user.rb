@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password_confirmation, :role, :phone_number, :password
+  attr_accessible :email, :name, :password_confirmation, :role, :phone_number, :password, :user_image
   
+    mount_uploader :user_image, PaintingImageUploader
 
   has_secure_password
 
